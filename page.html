@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Калькулятор</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
+    <script src="script.js" defer></script>
+</head>
 
-  <body>
-    <div class="calculator">
-      <div class="main-container">
-        <div class="input-container">
-          <input type="number" id="numberFirst" class="element-calk"/>
-          <select id="operator" class="element-calk">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-          </select>
-          <input type="number" id="numberSecond" class="element-calk"/>
+<body class="flex-center bg-green">
+    <div class="calculate">
+        <div class="main-container flex-column bg-green border-dashed-red">
+            <div class="input-container flex-space-between">
+                <input type="number" id="numberFirst" class="element-calk bg-green border-dashed-red text-red" />
+                <select id="operator" class="element-calk bg-green border-dashed-red text-red">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="number" id="numberSecond" class="element-calk bg-green border-dashed-red text-red" />
+            </div>
+            <button class="bg-green border-dashed-red text-red" onclick="calculate()">Подсчитать</button>
+            <div id="results" class="results bg-green border-dashed-red text-red"></div>
         </div>
-        <button onclick="calculate()">подсчитать</button>
-        <div class="results" id="results"></div>
-      </div>
     </div>
-  </body>
+</body>
 </html>
